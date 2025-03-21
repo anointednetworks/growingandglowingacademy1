@@ -28,7 +28,7 @@ interface FooterProps {
 
 const Footer = ({
   logoSrc = "/vite.svg",
-  companyName = "Sunshine Daycare Center",
+  companyName = "Grow Glow Academy",
   address = "123 Bright Avenue, Kidsville, CA 90210",
   phone = "(555) 123-4567",
   email = "info@sunshinedaycare.example",

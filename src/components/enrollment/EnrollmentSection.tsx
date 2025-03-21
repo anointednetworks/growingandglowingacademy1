@@ -110,7 +110,7 @@ const EnrollmentSection = ({
                       </DialogHeader>
                       <div className="mt-4 border rounded-md p-6 bg-gray-50">
                         <h3 className="text-xl font-bold mb-4 text-center">
-                          Sunshine Daycare Enrollment Application
+                          Grow Glow Academy Enrollment Application
                         </h3>
                         <div className="space-y-6">
                           <div className="space-y-2">

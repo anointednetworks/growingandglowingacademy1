@@ -9,7 +9,7 @@ const Home = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <HeroSection
-        title="Welcome to Sunshine Daycare"
+        title="Welcome to Grow Glow Academy"
         description="A nurturing environment where your child can learn, play, and grow. Our dedicated staff provides exceptional care in a safe and stimulating setting."
         ctaText="Enroll Now"
         onCtaClick={() => console.log("Enrollment button clicked")}
@@ -23,7 +23,7 @@ const Home = () => {
             Our Approach to Childcare
           </h2>
           <p className="text-lg text-gray-600 mb-8">
-            At Sunshine Daycare, we believe every child deserves a nurturing
+            At Grow Glow Academy, we believe every child deserves a nurturing
             environment that fosters growth, creativity, and joy. Our curriculum
             balances structured learning with free play, helping children
             develop essential skills while having fun.

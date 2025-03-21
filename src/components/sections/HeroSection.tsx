@@ -10,7 +10,7 @@ interface HeroSectionProps {
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
-  title = "Welcome to Sunshine Daycare",
+  title = "Welcome to Grow Glow Academy",
   description = "A nurturing environment where your child can learn, play, and grow. Our dedicated staff provides exceptional care in a safe and stimulating setting.",
   ctaText = "Enroll Now",
   onCtaClick = () => console.log("Enrollment button clicked"),

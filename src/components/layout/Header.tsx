@@ -34,7 +34,7 @@ const Header = ({
         <Link to="/" className="flex items-center">
           <img src={logo} alt="Daycare Logo" className="h-10 w-auto" />
           <span className="ml-2 text-xl font-bold text-primary">
-            Happy Kids Daycare
+            Grow Glow Academy
           </span>
         </Link>
 
