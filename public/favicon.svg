@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <!-- Sun rays -->
+  <g fill="#C1E7F2">
+    <!-- Outer rays -->
+    <rect x="236" y="30" width="40" height="80" rx="20" />
+    <rect x="236" y="402" width="40" height="80" rx="20" />
+    <rect x="402" y="236" width="80" height="40" rx="20" />
+    <rect x="30" y="236" width="80" height="40" rx="20" />
+    
+    <!-- Diagonal rays -->
+    <rect x="340" y="90" width="40" height="80" rx="20" transform="rotate(45 360 130)" />
+    <rect x="90" y="340" width="40" height="80" rx="20" transform="rotate(45 110 380)" />
+    <rect x="340" y="340" width="40" height="80" rx="20" transform="rotate(-45 360 380)" />
+    <rect x="90" y="90" width="40" height="80" rx="20" transform="rotate(-45 110 130)" />
+  </g>
+  
+  <!-- Center circle -->
+  <circle cx="256" cy="256" r="120" fill="#C1E7F2" />
+  
+  <!-- Children silhouettes -->
+  <g fill="#6B9E6B" transform="translate(180, 220)">
+    <!-- Baby -->
+    <circle cx="20" cy="20" r="15" />
+    <rect x="15" y="35" width="10" height="20" rx="5" />
+    <rect x="5" y="45" width="30" height="10" rx="5" />
+    
+    <!-- Child -->
+    <circle cx="60" cy="15" r="15" />
+    <rect x="55" y="30" width="10" height="40" rx="5" />
+    <rect x="45" y="50" width="30" height="10" rx="5" />
+    
+    <!-- Older child with raised arms -->
+    <circle cx="100" cy="15" r="15" />
+    <rect x="95" y="30" width="10" height="40" rx="5" />
+    <rect x="85" y="50" width="30" height="10" rx="5" />
+    <rect x="75" y="30" width="10" height="25" rx="5" transform="rotate(-45 75 30)" />
+    <rect x="115" y="30" width="10" height="25" rx="5" transform="rotate(45 115 30)" />
+  </g>
+  
+  <!-- Text path around the circle -->
+  <path id="textPath" d="M256,136 A120,120 0 1 1 255.9,136" fill="none" />
+  <text font-family="Arial" font-weight="bold" font-size="20" fill="#333">
+    <textPath href="#textPath" startOffset="5%">GROWING & GLOWING ACADEMY</textPath>
+  </text>
+</svg>

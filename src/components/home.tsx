@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useRef } from "react";
 import HeroSection from "./sections/HeroSection";
 import NewsletterForm from "./newsletter/NewsletterForm";
 import EventCalendar from "./calendar/EventCalendar";
 import EnrollmentSection from "./enrollment/EnrollmentSection";
 
 const Home = () => {
+  const enrollmentSectionRef = useRef<HTMLElement>(null);
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -12,7 +13,7 @@ const Home = () => {
         title="Welcome to Grow Glow Academy"
         description="A nurturing environment where your child can learn, play, and grow. Our dedicated staff provides exceptional care in a safe and stimulating setting."
         ctaText="Enroll Now"
-        onCtaClick={() => console.log("Enrollment button clicked")}
+        enrollmentRef={enrollmentSectionRef}
       />
 
       {/* Main Content */}
@@ -141,10 +142,12 @@ const Home = () => {
         </section>
 
         {/* Enrollment Section */}
-        <EnrollmentSection
-          title="Join Our Daycare Family"
-          description="Start your child's journey with us by completing our enrollment application. You can preview the form, download it as a PDF, or fill it out online."
-        />
+        <section ref={enrollmentSectionRef as React.RefObject<HTMLElement>}>
+          <EnrollmentSection
+            title="Join Our Daycare Family"
+            description="Start your child's journey with us by completing our enrollment application. You can preview the form, download it as a PDF, or fill it out online."
+          />
+        </section>
 
         {/* Testimonials Section */}
         <section className="py-12">
@@ -173,7 +176,7 @@ const Home = () => {
                 </div>
               </div>
               <p className="text-gray-600 italic">
-                "The staff at Sunshine Daycare has been incredible. My son has
+                "The staff at Grow Glow Academy has been incredible. My son has
                 flourished socially and academically since enrolling. I
                 appreciate the regular updates and photos they share throughout
                 the day."
@@ -209,8 +212,8 @@ const Home = () => {
                 </div>
               </div>
               <p className="text-gray-600 italic">
-                "We tried several daycares before finding Sunshine, and the
-                difference is remarkable. The curriculum is engaging, the
+                "We tried several daycares before finding Grow Glow Academy, and
+                the difference is remarkable. The curriculum is engaging, the
                 facility is always clean, and the teachers genuinely care about
                 each child's development."
               </p>
@@ -246,9 +249,9 @@ const Home = () => {
               </div>
               <p className="text-gray-600 italic">
                 "As a first-time parent, I was nervous about daycare, but the
-                team at Sunshine made the transition seamless. They took the
-                time to understand my son's needs and preferences, making him
-                feel comfortable from day one."
+                team at Grow Glow Academy made the transition seamless. They
+                took the time to understand my son's needs and preferences,
+                making him feel comfortable from day one."
               </p>
               <div className="mt-4 flex">
                 {[1, 2, 3, 4, 5].map((star) => (
@@ -273,7 +276,7 @@ const Home = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-xl font-bold mb-4">Sunshine Daycare</h3>
+              <h3 className="text-xl font-bold mb-4">Grow Glow Academy</h3>
               <p className="mb-4">
                 Providing quality childcare services since 2010.
               </p>
@@ -376,13 +379,13 @@ const Home = () => {
                 <p className="mb-2">123 Sunshine Avenue</p>
                 <p className="mb-2">Anytown, ST 12345</p>
                 <p className="mb-2">Phone: (123) 456-7890</p>
-                <p className="mb-2">Email: info@sunshinedaycare.com</p>
+                <p className="mb-2">Email: info@growglowacademy.com</p>
               </address>
             </div>
           </div>
           <div className="border-t border-blue-800 mt-8 pt-8 text-center">
             <p>
-              &copy; {new Date().getFullYear()} Sunshine Daycare. All rights
+              &copy; {new Date().getFullYear()} Grow Glow Academy. All rights
               reserved.
             </p>
           </div>

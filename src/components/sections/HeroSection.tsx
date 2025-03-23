@@ -7,27 +7,29 @@ interface HeroSectionProps {
   ctaText?: string;
   onCtaClick?: () => void;
   backgroundImage?: string;
+  enrollmentRef?: React.RefObject<HTMLElement>;
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({
   title = "Welcome to Grow Glow Academy",
   description = "A nurturing environment where your child can learn, play, and grow. Our dedicated staff provides exceptional care in a safe and stimulating setting.",
   ctaText = "Enroll Now",
-  onCtaClick = () => console.log("Enrollment button clicked"),
+  onCtaClick = () => {},
+  enrollmentRef,
   backgroundImage = "https://images.unsplash.com/photo-1587654780291-39c9404d746b?w=1200&q=80",
 }) => {
   return (
     <div className="relative w-full h-[600px] bg-blue-50 overflow-hidden">
       {/* Background Image with Overlay */}
       <div
-        className="absolute inset-0 bg-cover bg-center"
+        className="absolute inset-0 bg-cover bg-center z-0"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <div className="absolute inset-0 bg-blue-900/30" />
       </div>
 
       {/* Content Container */}
-      <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
+      <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center z-10">
         <div className="max-w-2xl">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
             {title}
@@ -35,8 +37,14 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           <p className="text-xl text-white/90 mb-8">{description}</p>
           <Button
             size="lg"
-            onClick={onCtaClick}
-            className="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-8 py-3 rounded-md text-lg shadow-lg transition-all"
+            onClick={() => {
+              if (enrollmentRef && enrollmentRef.current) {
+                enrollmentRef.current.scrollIntoView({ behavior: "smooth" });
+              } else {
+                onCtaClick();
+              }
+            }}
+            className="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-8 py-3 rounded-md text-lg shadow-lg transition-all relative z-20"
           >
             {ctaText}
           </Button>

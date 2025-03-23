@@ -31,7 +31,7 @@ const Footer = ({
   companyName = "Grow Glow Academy",
   address = "123 Bright Avenue, Kidsville, CA 90210",
   phone = "(555) 123-4567",
-  email = "info@growglowacademy.example",
+  email = "info@growglowacademy.com",
   socialLinks = {
     facebook: "https://facebook.com",
     twitter: "https://twitter.com",
